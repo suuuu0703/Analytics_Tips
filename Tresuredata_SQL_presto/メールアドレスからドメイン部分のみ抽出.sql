@@ -1,2 +1,2 @@
 select
-    regexp_replace(email ,'^(.+)@','') 
+    regexp_replace(email, '^(.+)@', '') 
