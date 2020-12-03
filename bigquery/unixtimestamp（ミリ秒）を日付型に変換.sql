@@ -1,2 +1,2 @@
 select
-    format_datetime('%Y-%m-%d %', date(timestamp_micros(event_timestamp), "Asia/Tokyo")) as time
+    format_timestamp('%Y-%m-%d %H:%M:%S', timestamp_micros(event_timestamp), 'Asia/Tokyo') as datetime
