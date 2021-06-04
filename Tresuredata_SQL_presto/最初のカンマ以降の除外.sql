@@ -1,4 +1,4 @@
 select
-    regexp_replace(fsjp__f_sectors__c, ',(.+)', '')
+    regexp_replace(fsjp__f_sectors_text__c, ',(.+)', '')
 from
     salesforce.forcas
