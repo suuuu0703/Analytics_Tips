@@ -25,4 +25,4 @@ union all
 
 select 
     td_time_format(td_scheduled_time(), 'yyyy-MM-01', 'JST') as base_date
-    ,(select max(date) from chatwork_account_stats.cs_paid_plan_usage_per_contract_daily_v1) as col_date
+    td_time_format(td_scheduled_time(), 'yyyy-MM-dd', 'JST') as col_date
