@@ -9,7 +9,10 @@ from (
             d
         from (
             values
-                sequence(td_time_parse(date_format(from_unixtime(td_scheduled_time()) - interval '14' month, '%Y-%m-01'), 'JST'), td_time_add(td_time_parse(td_time_format(td_scheduled_time(), 'yyyy-MM-01', 'JST'), 'JST') ,'-1d'), 60 * 60 * 24)
+                sequence(
+                    td_time_parse(date_format(from_unixtime(td_scheduled_time()) - interval '14' month, '%Y-%m-01'), 'JST')
+                    ,td_time_add(td_time_parse(td_time_format(td_scheduled_time(), 'yyyy-MM-01', 'JST'), 'JST') ,'-1d')
+                    ,60 * 60 * 24)
             ) as date_array(d)
         ) as da_tab
         cross join
