@@ -1,5 +1,5 @@
 select
-    
+    *
 from
     salesforce.lead
 where
