@@ -25,4 +25,4 @@ union all
 
 select 
     td_time_format(td_scheduled_time(), 'yyyy-MM-01', 'JST') as base_date
-    td_time_format(td_scheduled_time(), 'yyyy-MM-dd', 'JST') as col_date
+    ,td_time_format(td_scheduled_time(), 'yyyy-MM-dd', 'JST') as col_date
